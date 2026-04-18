@@ -17,6 +17,6 @@ jobs:
     - name: Build the site
       run: |
         docker run \
-        --rm \
-        -v ${{ github.workspace }}:/srv/jekyll \
-    
+        -rm
+        -v ${{ github.workspace }}:/srv/jekyll
+    -v ${{github.workspace}}:/srv/jekyll/builder/latest -bin/bash /c"jekyllbuild-future"
