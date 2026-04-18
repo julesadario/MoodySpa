@@ -19,10 +19,4 @@ jobs:
         docker run \
         --rm \
         -v ${{ github.workspace }}:/srv/jekyll \
-        jekyll/builder:latest /bin/bash -c "jekyll build --future"
-
-    - name: Upload Build Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: github-pages
-        path: ./_site
+    
